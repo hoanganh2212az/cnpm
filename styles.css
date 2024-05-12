@@ -1,0 +1,78 @@
+#phoneNumber {
+    text-decoration: underline; /* Giữ dấu gạch chân */
+    cursor: pointer; /* Giữ con trỏ chuột hình ngón tay chỉ */
+    font-weight: bold; /* Làm đậm chữ */
+    color: #4A90E2; /* Thay đổi màu chữ sang màu xanh lam nhạt */
+}
+
+
+
+#bookingForm {
+    border: 2px solid #4A90E2; /* Đổi màu viền sang màu xanh lam nhạt */
+    padding: 20px;
+    margin: 20px auto; /* Để căn giữa form */
+    border-radius: 10px; /* Bo tròn góc */
+    background-color: #f8f8f8; /* Màu nền cho form */
+    width: 50%; /* Điều chỉnh chiều rộng của form */
+}
+
+.container h1, .container p {
+    text-align: center; /* Căn giữa nội dung */
+}
+
+h1 {
+    margin-top: 20px; /* Khoảng cách từ đầu trang đến tiêu đề */
+}
+
+p {
+    margin-top: 5px; /* Khoảng cách từ tiêu đề đến dòng thông tin khách hàng */
+    font-size: 16px; /* Cỡ chữ cho thông tin khách hàng */
+    color: #333; /* Màu chữ */
+}
+
+
+button {
+    margin-top: 10px; /* Khoảng cách trên của nút */
+    cursor: pointer; /* Con trỏ chuột khi di chuyển vào nút */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1000; /* Đảm bảo popup nằm trên tất cả các nội dung khác */
+}
+
+.popup-content input,
+.popup-content button {
+    width: 95%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+body {
+    background-color: #eaeaea; /* Màu nền chung cho trang, tạo sự tách biệt với form */
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto; /* Căn giữa theo chiều ngang và 15% từ đầu trang */
+    padding: 20px;
+    border: 1px solid #ddd; /* Viền cho phần nội dung popup */
+    width: 30%; /* Chiều rộng của popup */
+    border-radius: 5px; /* Bo tròn góc cho nội dung popup */
+    margin-top: 20px;
+}
+
+.close {
+    float: right; /* Nút đóng được đặt ở phía bên phải */
+    font-size: 28px; /* Cỡ chữ của nút đóng */
+    font-weight: bold;
+}
+
+.close:hover {
+    color: red; /* Màu của nút khi được rê chuột vào */
+    cursor: pointer;
+}

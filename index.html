@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt lịch Salon Tóc</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Đặt lịch Salon Tóc</h1>
+        <p style="text-align: center;">Khách hàng: <span id="phoneNumber" onclick="showEditPopup()">SỬA SĐT ĐẶT LỊCH</span></p>
+
+        <!-- Popup for editing phone number -->
+        <div id="editPopup" class="popup" style="display:none;">
+            <div class="popup-content">
+                <span class="close" onclick="closeEditPopup()">&times;</span>
+                <h2>Thay đổi thông tin người đặt lịch hẹn</h2>
+                <label for="newPhoneNumber">Số điện thoại mới:</label>
+                <input type="text" id="newPhoneNumber" name="newPhoneNumber"><br>
+                <button onclick="updatePhoneNumber()">Cập nhật</button>
+            </div>
+        </div>
+        
+        <form id="bookingForm">
+            <label for="salon">Địa chỉ Salon:</label>
+            <select id="salon">
+                <option value="salon1">Salon 1</option>
+                <option value="salon2">Salon 2</option>
+                <option value="salon3">Salon 3</option>
+            </select>
+            <button type="button" onclick="chooseRandomSalon()">Chọn Salon gần nhất</button><br>
+            
+
+            <label for="service">Dịch vụ đặt lịch:</label>
+            <select id="service">
+                <option value="service1">Dịch vụ 1</option>
+                <option value="service2">Dịch vụ 2</option>
+                <option value="service3">Dịch vụ 3</option>
+            </select><br>
+
+            <label for="datetime">Thời gian đặt lịch:</label>
+            <input type="datetime-local" id="datetime"><br>
+
+            <button type="button" onclick="bookAppointment()">Đặt lịch</button>
+        </form>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content" id="popupContent">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p id="bookingInfo"></p>
+            <button onclick="closePopup()">OK</button>
+            <button onclick="editAppointment()">Sửa lịch</button>
+            <button onclick="cancelAppointment()">Hủy lịch</button>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
